@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    border: 2px solid black;
+    padding: 0;
+}
+
+body {
+    background-color: #000000; /* Preto */
+    color: #ffffff; /* Branco */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.titulo-destaque {
+    color: #d64d2b; /* Destaques laranja */
+
+}
+
+.texto-destaque {
+    color: #d64d2b;
+}
+
+.urgente {
+    color: red;
+}
