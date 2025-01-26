@@ -1,26 +1,160 @@
+/* Importação da fonte */
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Reset básico */
 * {
     margin: 0;
-    border: 2px solid black;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    background-color: #000000; /* Preto */
-    color: #ffffff; /* Branco */
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    padding: 10px; 
+}
+
+header {
+    text-align: center;
+    padding: 10px;
+    margin-top: 10px; 
+}
+
+.logo {
+    width: 120px;
+    height: auto;
+    max-height: 80px;
+}
+
+/* Container principal */
+.apresentacao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+/* Texto e botões */
+.content {
+    max-width: 50%;
+}
+
+h1 {
+    font-size: 1.8rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    font-family: 'Krona One', sans-serif; /* Aplicando a fonte Krona One */
 }
 
 .titulo-destaque {
-    color: #d64d2b; /* Destaques laranja */
+    color: #d64d2b; /* Cor laranja substituindo o azul */
+}
 
+p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    font-family: 'Montserrat', sans-serif; /* Aplicando a fonte Krona One */
 }
 
 .texto-destaque {
-    color: #d64d2b;
+    color: #d64d2b; /* Cor laranja */
 }
 
 .urgente {
-    color: red;
+    color: #ff9800; /* Laranja mais claro */
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+/* Botões */
+.btn {
+    text-decoration: none;
+    background-color: #d64d2b; /* Laranja */
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif; /* Aplicando a fonte Krona One aos botões */
+    transition: all 0.3s;
+}
+
+.btn:hover {
+    background-color: #69200f; /* Laranja mais escuro */
+}
+
+/* Imagem */
+.image-container {
+    position: relative;
+}
+
+.profile-image {
+    width: 350px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    margin-top: auto;
+    padding: 10px;
+    font-size: 0.9rem;
+    font-family: 'roboto', sans-serif;
+    background-color: #111;
+    color: #777;
+}
+
+/* Responsividade - Ajuste para telas menores */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    header {
+        margin-top: 20px;
+    }
+
+    .content {
+        max-width: 90%;
+    }
+
+    .profile-image {
+        width: 250px;
+    }
+
+    h1 {
+        font-size: 1.4rem;
+    }
+
+    p {
+        font-size: 1.1rem;
+    }
+
+    /* Alterando a direção do layout para coluna em telas pequenas */
+    .apresentacao {
+        flex-direction: column-reverse; /* Inverte a ordem dos itens: imagem fica em cima, botões embaixo */
+        align-items: center; /* Centralizando os itens */
+    }
+
+    /* Alterando a disposição dos botões para empilhar em telas pequenas */
+    .buttons {
+        gap: 15px; /* Dando um espaçamento entre os botões */
+        align-items: center; /* Centralizando os botões */
+        width: 100%;
+    }
 }
